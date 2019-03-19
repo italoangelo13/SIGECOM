@@ -11,12 +11,7 @@ namespace SIGECOM
 {
     public partial class index : System.Web.UI.Page
     {
-        private void ShowMessage(string msg)
-        {
-            string g = Guid.NewGuid().ToString("N");
-            if (!ClientScript.IsStartupScriptRegistered(g))
-                ClientScript.RegisterStartupScript(typeof(string), g, "<script>alert('" + msg + "')</script>");
-        }
+        
         private void Toast(string msg)
         {
             string g = Guid.NewGuid().ToString("N");
@@ -55,6 +50,8 @@ namespace SIGECOM
             if (usuario.ToUpper().Equals("ADMIN") && senha.Equals("sigecom*2019"))
             {
                 Session["usuario"] = "ADMIN";
+                Session["codUsuario"] = 0;
+                Server.Transfer("Dashboard.aspx");
             }
             else
             {
@@ -69,6 +66,7 @@ namespace SIGECOM
                 {
                     Session["usuario"] = dt.Rows[0]["USU_USUARIO"].ToString().ToUpper();
                     Session["codUsuario"] = int.Parse(dt.Rows[0]["USU_CODIGOID"].ToString().ToUpper());
+                    Server.Transfer("Dashboard.aspx");
                 }
                 else
                 {
