@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\local\jquery-3.3.1.min.js" />
+    <Content Include="assets\local\sigecomStyle.css" />
     <Content Include="assets\materialize\LICENSE" />
     <Content Include="assets\materialize\README.md" />
     <Content Include="assets\fontello\config.json" />

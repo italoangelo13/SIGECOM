@@ -15,6 +15,7 @@
     <link href="assets/materialize/css/materialize.min.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="../assets/fontello/css/fontello.css" />
     <link rel="stylesheet" type="text/css" href="../assets/fontello/css/animation.css" />
+    <link href="assets/local/sigecomStyle.css" rel="stylesheet" />
     <style>
         .modal-empresa {
             z-index: 999999;
@@ -110,9 +111,20 @@
                     </div>
                 </nav>
             </div>
-            <div class="row">
-                <iframe name="tela" src="indicativos.aspx" class="col l12" height="480px"></iframe>
+            <div class="row" style="margin:0px">
+                <iframe name="tela" src="indicativos.aspx" class="col l12" height="626px" style="border:0px; padding:0px"></iframe>
             </div>
+            <footer class="row page-footer footer-copyright bg-blue" style="padding:1px;margin:0px;">
+                <div class="col l6">
+                    <h6>SIGECOM - SISTEMA DE GERENCIAMENTO COMERCIAL</h6>
+                    <i>Powered by Faria Soft - Todos os direitos Reservados</i>
+                </div>
+                <div class="col l6 right-align">
+                    Versão do Sistema - <asp:Label runat="server" ID="_lblVersao">01.00.00.000</asp:Label>
+                    <br />
+                    Lançada em <asp:Label runat="server" ID="_lblDtLancamento">20/03/2019 ás 16:53</asp:Label>
+                </div>
+            </footer>
         </div>
 
 

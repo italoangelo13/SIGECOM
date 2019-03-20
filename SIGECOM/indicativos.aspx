@@ -15,13 +15,34 @@
     <link href="assets/materialize/css/materialize.min.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="../assets/fontello/css/fontello.css" />
     <link rel="stylesheet" type="text/css" href="../assets/fontello/css/animation.css" />
+    <link href="assets/local/sigecomStyle.css" rel="stylesheet" />
     <style>
-        .indCard-prdidos {
-            border: 2px solid #3289f3;
-            border-radius: 10px;
-            background: #0d47a1;
+        .indCard {
+            border: 2px solid #fff;
+            border-radius: 2px;
             color: #fff;
             font-weight: 700;
+            margin: 2px;
+        }
+
+        .bg-green{
+            background-color:#2e7d32;
+        }
+
+        .bg-teal{
+            background-color:#00796b;
+        }
+
+        .bg-red{
+            background-color:#c62828;
+        }
+
+        .bg-yellow{
+            background-color:#f9a825;
+        }
+
+        .bg-blue{
+            background-color:#1565c0;
         }
 
         .icon-card {
@@ -30,7 +51,7 @@
             font-size: 50pt;
         }
 
-        .texto-card{
+        .texto-card {
             position: absolute;
         }
     </style>
@@ -39,40 +60,38 @@
     <script src="assets/local/jquery-3.3.1.min.js"></script>
     <script src="assets/materialize/js/materialize.min.js"></script>
 </head>
-<body>
+<body style="background: url('assets/img/bg-dashboard.jpg') center;">
     <form id="form1" runat="server">
-        <div class="container-fluid">
+        <div class="container-fluid" style="padding:10px">
             <div class="row">
-                <div class="col l6">
-                    <h5>Pedidos</h5>
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col l3 center-align indCard-prdidos">
-                                <div class="texto-card">
-                                    <p>Em Aprovação</p>
-                                    <p>
-                                        <asp:Label ID="_lblIndAprovacao" runat="server" Style="font-size: 20pt">0</asp:Label>
-                                    </p>
-                                </div>
-
-                                <i class="icone-clock icon-card"></i>
-                            </div>
-
-
-                            <div class="col l3 center-align indCard-prdidos">
-                                <div class="texto-card">
-                                    <p>Concluidos</p>
-                                    <p>
-                                        <asp:Label ID="_lblIndConcluidos" runat="server" Style="font-size: 20pt">0</asp:Label>
-                                    </p>
-                                </div>
-
-                                <i class="icone-check icon-card"></i>
-                            </div>
-
-                        </div>
-                    </div>
+                <div class="col l12">
+                    <h3>Indicativos</h3>
                 </div>
+            </div>
+            <div class="row">
+                <div class="col l3 center-align indCard bg-blue">
+                    <div class="texto-card">
+                        <p>Pedidos Abertos</p>
+                        <p>
+                            <asp:Label ID="Label1" runat="server" Style="font-size: 20pt">0</asp:Label>
+                        </p>
+                    </div>
+
+                    <i class="icone-clock icon-card"></i>
+                </div>
+
+
+                <div class="col l3 center-align indCard bg-red">
+                    <div class="texto-card">
+                        <p>Clientes</p>
+                        <p>
+                            <asp:Label ID="Label2" runat="server" Style="font-size: 20pt">0</asp:Label>
+                        </p>
+                    </div>
+
+                    <i class="icone-check icon-card"></i>
+                </div>
+
             </div>
         </div>
     </form>
