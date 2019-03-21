@@ -57,72 +57,34 @@
                         <asp:Label ID="_lblUsuario" runat="server">Usuario</asp:Label></h6>
                 </div>
             </div>
-            <div class="row" style="margin-bottom: 0px">
-                <%-- Listagens Menu --%>
+            <div class="row bg-blue" style="margin-bottom: 0px">
+                <div class="col l12 ">
+                    <asp:Menu ID="_menuPrincipal" runat="server" CssClass="bg-blue" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="13pt" ForeColor="White" Orientation="Horizontal" StaticEnableDefaultPopOutImage="False" Width="100%">
+                        <Items>
+                            <asp:MenuItem Target="conteudo" Text="Administrativo |" Value="Administrativo |">
+                                <asp:MenuItem NavigateUrl="~/Views/Empresa.aspx" Target="tela" Text="Institucional" Value="Institucional"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Comercial |" Value="Comercial |"></asp:MenuItem>
+                            <asp:MenuItem Text="Almoxarifado |" Value="Almoxarifado |"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                </div>
 
-                <!-- Dropdown Admin -->
-                <ul id="dropdownAdm" class="dropdown-content" style="width: 300px">
-                    <li>
-                        <asp:HyperLink runat="server" NavigateUrl="~/Views/Empresa.aspx" Target="tela">Empresa</asp:HyperLink></li>
-                    <li>
-                        <asp:HyperLink runat="server" NavigateUrl="~/Views/Empresa.aspx" Target="tela">Usuarios</asp:HyperLink></li>
-                    <li>
-                        <asp:HyperLink runat="server" NavigateUrl="~/Views/Empresa.aspx" Target="tela">Funcionarios</asp:HyperLink></li>
-                    <li>
-                        <asp:HyperLink runat="server" NavigateUrl="~/Views/Empresa.aspx" Target="tela">Departamentos</asp:HyperLink></li>
-                    <li>
-                        <asp:HyperLink runat="server"  CssClass="dropdown-trigger" data-target="dropdownEnd" >Endereço</asp:HyperLink></li>
-                    <li class="divider"></li>
-                    <li>
-                        <asp:HyperLink runat="server" NavigateUrl="" Target="tela">ADM001 - Relação de Usuarios</asp:HyperLink></li>
-                    <li>
-                        <asp:HyperLink runat="server" NavigateUrl="" Target="tela">ADM002 - Relação de Funcionarios</asp:HyperLink></li>
-                    <li>
-                        <asp:HyperLink runat="server" NavigateUrl="" Target="tela">ADM003 - Relação de Departamentos</asp:HyperLink></li>
-                </ul>
-
-
-                <!-- Dropdown Endereco -->
-                <ul id="dropdownEnd" class="dropdown-content" style="width: 300px;">
-                    <li>
-                        <asp:HyperLink runat="server" NavigateUrl="~/Views/Empresa.aspx" Target="tela">Tipo Logradouro</asp:HyperLink></li>
-                    <li>
-                        <asp:HyperLink runat="server" NavigateUrl="~/Views/Empresa.aspx" Target="tela">Logradouro</asp:HyperLink></li>
-                    <li>
-                        <asp:HyperLink runat="server" NavigateUrl="~/Views/Empresa.aspx" Target="tela">Bairro</asp:HyperLink></li>
-                    <li>
-                        <asp:HyperLink runat="server" NavigateUrl="~/Views/Empresa.aspx" Target="tela">Municipio</asp:HyperLink></li>
-                </ul>
-                <nav class="col l12 blue">
-                    <div class="nav-wrapper ">
-
-                        <ul id="nav-mobile" class="left hide-on-med-and-down">
-                            <li>
-                                <asp:HyperLink runat="server" CssClass="dropdown-trigger" data-target="dropdownAdm">Administrativo</asp:HyperLink>
-                            </li>
-                            <li><a href="badges.html">Usuarios</a></li>
-                            <li><a href="collapsible.html">Funcionarios</a></li>
-                            <li><a href="collapsible.html">Clientes</a></li>
-                            <li><a href="collapsible.html">Produtos</a></li>
-                            <li><a href="collapsible.html">Pedidos</a></li>
-                            <li><a href="collapsible.html">Contas a Receber</a></li>
-                            <li><a href="collapsible.html">Contas a Pagar</a></li>
-                        </ul>
-                    </div>
-                </nav>
             </div>
-            <div class="row" style="margin:0px">
-                <iframe name="tela" src="indicativos.aspx" class="col l12" height="626px" style="border:0px; padding:0px"></iframe>
+            <div class="row" style="margin: 0px">
+                <iframe name="tela" src="indicativos.aspx" class="col l12" height="626px" style="border: 0px; padding: 0px"></iframe>
             </div>
-            <footer class="row page-footer footer-copyright bg-blue" style="padding:1px;margin:0px;">
+            <footer class="row page-footer footer-copyright bg-blue" style="padding: 1px; margin: 0px;">
                 <div class="col l6">
                     <h6>SIGECOM - SISTEMA DE GERENCIAMENTO COMERCIAL</h6>
                     <i>Powered by Faria Soft - Todos os direitos Reservados</i>
                 </div>
                 <div class="col l6 right-align">
-                    Versão do Sistema - <asp:Label runat="server" ID="_lblVersao">01.00.00.000</asp:Label>
+                    Versão do Sistema -
+                    <asp:Label runat="server" ID="_lblVersao">01.00.00.000</asp:Label>
                     <br />
-                    Lançada em <asp:Label runat="server" ID="_lblDtLancamento">20/03/2019 ás 16:53</asp:Label>
+                    Lançada em
+                    <asp:Label runat="server" ID="_lblDtLancamento">20/03/2019 ás 16:53</asp:Label>
                 </div>
             </footer>
         </div>
