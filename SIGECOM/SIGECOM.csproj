@@ -78,6 +78,19 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="assets\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="assets\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="assets\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="assets\bootstrap\css\bootstrap.css" />
+    <Content Include="assets\bootstrap\css\bootstrap.min.css" />
+    <Content Include="assets\bootstrap\jquery-3.3.1.min.js" />
+    <Content Include="assets\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="assets\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="assets\bootstrap\js\bootstrap.js" />
+    <Content Include="assets\bootstrap\js\bootstrap.min.js" />
+    <Content Include="assets\local\cpf_cnpj.js" />
+    <Content Include="assets\local\Format.js" />
     <Content Include="assets\local\jquery-3.3.1.min.js" />
     <Content Include="assets\local\sigecomStyle.css" />
     <Content Include="assets\materialize\LICENSE" />
@@ -89,6 +102,16 @@
     <Content Include="assets\fontello\font\fontello.woff2" />
     <Content Include="assets\img\favicon.cdr" />
     <Content Include="assets\img\logo.cdr" />
+    <Content Include="assets\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="assets\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="assets\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="assets\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="assets\bootstrap\css\bootstrap.css.map" />
+    <Content Include="assets\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="assets\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="assets\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="assets\bootstrap\js\bootstrap.js.map" />
+    <Content Include="assets\bootstrap\js\bootstrap.min.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -135,6 +158,7 @@
     <Content Include="Dashboard.aspx" />
     <Content Include="index.aspx" />
     <Content Include="indicativos.aspx" />
+    <Content Include="Views\CRUDCategorias.aspx" />
     <Content Include="Views\Empresa.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -163,6 +187,13 @@
     </Compile>
     <Compile Include="Log.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\CRUDCategorias.aspx.cs">
+      <DependentUpon>CRUDCategorias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\CRUDCategorias.aspx.designer.cs">
+      <DependentUpon>CRUDCategorias.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Empresa.aspx.cs">
       <DependentUpon>Empresa.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

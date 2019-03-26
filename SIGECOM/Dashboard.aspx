@@ -6,13 +6,14 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Faria Personalizados</title>
+    <title>SIGECOM - Sistema de Gerenciamento Comercial</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+    <%--<link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">--%>
 
     <!--Estilos-->
-    <link href="assets/materialize/css/materialize.min.css" rel="stylesheet" />
+    <%--<link href="assets/materialize/css/materialize.min.css" rel="stylesheet" />--%>
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="../assets/fontello/css/fontello.css" />
     <link rel="stylesheet" type="text/css" href="../assets/fontello/css/animation.css" />
     <link href="assets/local/sigecomStyle.css" rel="stylesheet" />
@@ -29,7 +30,8 @@
 
     <%-- Scripts --%>
     <script src="assets/local/jquery-3.3.1.min.js"></script>
-    <script src="assets/materialize/js/materialize.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <%--<script src="assets/materialize/js/materialize.min.js"></script>--%>
     <script>
         $(document).ready(function () {
             $(".dropdown-trigger").dropdown({
@@ -45,41 +47,88 @@
         <asp:HyperLink ID="_lkCadEmpresa" Visible="false" NavigateUrl="~/Views/Empresa.aspx" Target="tela" runat="server"></asp:HyperLink>
         <div class="container-fluid">
             <div class="row" style="margin-bottom: 0px">
-                <div class="col l9">
+                <div class="col-lg-9">
                     <h6>
                         <asp:HyperLink ID="_lkHome" NavigateUrl="~/indicativos.aspx" Target="tela" runat="server"><i class='icone-home'></i> Inicio</asp:HyperLink>
                         |
                         <asp:LinkButton ID="_lkLogout" runat="server" OnClick="_lkLogout_Click"><i class='icone-logout'></i> Sair</asp:LinkButton>
                     </h6>
                 </div>
-                <div class="col l3 right-align">
+                <div class="col-lg-3 text-right">
                     <h6>Olá,
                         <asp:Label ID="_lblUsuario" runat="server">Usuario</asp:Label></h6>
                 </div>
             </div>
-            <div class="row bg-blue" style="margin-bottom: 0px">
-                <div class="col l12 ">
-                    <asp:Menu ID="_menuPrincipal" runat="server" CssClass="bg-blue" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="13pt" ForeColor="White" Orientation="Horizontal" StaticEnableDefaultPopOutImage="False" Width="100%">
-                        <Items>
-                            <asp:MenuItem Target="conteudo" Text="Administrativo |" Value="Administrativo |">
-                                <asp:MenuItem NavigateUrl="~/Views/Empresa.aspx" Target="tela" Text="Institucional" Value="Institucional"></asp:MenuItem>
-                            </asp:MenuItem>
-                            <asp:MenuItem Text="Comercial |" Value="Comercial |"></asp:MenuItem>
-                            <asp:MenuItem Text="Almoxarifado |" Value="Almoxarifado |"></asp:MenuItem>
-                        </Items>
-                    </asp:Menu>
-                </div>
+            <div class="row">
+                <nav class="navbar col-lg-12 navbar-expand-lg navbar-dark bg-blue">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAdministrativo" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Administrativo
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownAdministrativo">
+                                    <a class="dropdown-item" href="Views/Empresa.aspx" target="tela">Institucional</a>
+                                    <a class="dropdown-item" href="#">Usuarios</a>
+                                    <a class="dropdown-item" href="#">Funcionarios</a>
+                                    <a class="dropdown-item" href="Views/Empresa.aspx" target="tela">Tipo Logradouro</a>
+                                    <a class="dropdown-item" href="#">Logradouro</a>
+                                    <a class="dropdown-item" href="#">Bairro</a>
+                                    <a class="dropdown-item" href="#">Municipio</a>
+                                    <a class="dropdown-item" href="#">Parametros</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">ADM001 - Relação de Usuarios</a>
+                                    <a class="dropdown-item" href="#">ADM002 - Relação de Funcionarios</a>
+                                    <a class="dropdown-item" href="#">ADM003 - Relação de Tipos de Logradouro</a>
+                                    <a class="dropdown-item" href="#">ADM004 - Relação de Logradouros</a>
+                                    <a class="dropdown-item" href="#">ADM005 - Relação de Bairros</a>
+                                    <a class="dropdown-item" href="#">ADM006 - Relação de Municipios</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownComercial" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Comercial
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownComercial">
+                                    <a class="dropdown-item" href="Views/Empresa.aspx" target="tela">Cliente</a>
+                                    <a class="dropdown-item" href="#">Pedidos</a>
+                                    <a class="dropdown-item" href="#">Orçamentos</a>
+                                    <a class="dropdown-item" href="#">Promoções</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">COM001 - Relação de Clientes</a>
+                                    <a class="dropdown-item" href="#">COM002 - Relação de Pedidos</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAlmoxarifado" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Almoxarifado
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownAlmoxarifado">
+                                    <a class="dropdown-item" href="Views/CRUDCategorias.aspx" target="tela">Categorias</a>
+                                    <a class="dropdown-item" href="Views/Empresa.aspx" target="tela">Produtos</a>
+                                    <a class="dropdown-item" href="#">Entrada de Produtos</a>
+                                    <a class="dropdown-item" href="#">Saida de Produtos</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">ALM001 - Relação de Produtos</a>
+                                    <a class="dropdown-item" href="#">ALM002 - Relação de Entradas de Produtos</a>
+                                    <a class="dropdown-item" href="#">ALM002 - Relação de Saida de Produtos</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
             </div>
+
             <div class="row" style="margin: 0px">
-                <iframe name="tela" src="indicativos.aspx" class="col l12" height="626px" style="border: 0px; padding: 0px"></iframe>
+                <iframe name="tela" src="indicativos.aspx" class="col-lg-12" height="626px" style="border: 0px; padding: 0px"></iframe>
             </div>
-            <footer class="row page-footer footer-copyright bg-blue" style="padding: 1px; margin: 0px;">
-                <div class="col l6">
+            <footer class="row bg-blue text-white" style="padding: 1px; margin: 0px;">
+                <div class="col-lg-6">
                     <h6>SIGECOM - SISTEMA DE GERENCIAMENTO COMERCIAL</h6>
                     <i>Powered by Faria Soft - Todos os direitos Reservados</i>
                 </div>
-                <div class="col l6 right-align">
+                <div class="col-lg-6 text-right">
                     Versão do Sistema -
                     <asp:Label runat="server" ID="_lblVersao">01.00.00.000</asp:Label>
                     <br />

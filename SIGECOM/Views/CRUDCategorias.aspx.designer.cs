@@ -10,7 +10,7 @@
 namespace SIGECOM.Views {
     
     
-    public partial class Empresa {
+    public partial class CRUDCategorias {
         
         /// <summary>
         /// form1 control.
@@ -22,165 +22,120 @@ namespace SIGECOM.Views {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// _lkSalvar control.
+        /// _pnlGridCategoria control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton _lkSalvar;
+        protected global::System.Web.UI.WebControls.Panel _pnlGridCategoria;
         
         /// <summary>
-        /// _lkLimpar control.
+        /// _lkNovo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton _lkLimpar;
+        protected global::System.Web.UI.WebControls.LinkButton _lkNovo;
         
         /// <summary>
-        /// _edRazaoSocial control.
+        /// _ddlPesquisar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox _edRazaoSocial;
+        protected global::System.Web.UI.WebControls.DropDownList _ddlPesquisar;
         
         /// <summary>
-        /// _edNomeFantasia control.
+        /// _edPesquisa control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox _edNomeFantasia;
+        protected global::System.Web.UI.WebControls.TextBox _edPesquisa;
         
         /// <summary>
-        /// _edDataAbertura control.
+        /// _lkPesquisar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox _edDataAbertura;
+        protected global::System.Web.UI.WebControls.LinkButton _lkPesquisar;
         
         /// <summary>
-        /// _edCnpj control.
+        /// _rblOrdenar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox _edCnpj;
+        protected global::System.Web.UI.WebControls.RadioButtonList _rblOrdenar;
         
         /// <summary>
-        /// _edTel1 control.
+        /// _gridCategorias control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox _edTel1;
+        protected global::System.Web.UI.WebControls.GridView _gridCategorias;
         
         /// <summary>
-        /// _edTel2 control.
+        /// _pnlDetCategoria control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox _edTel2;
+        protected global::System.Web.UI.WebControls.Panel _pnlDetCategoria;
         
         /// <summary>
-        /// _edFax control.
+        /// _lkSalvarCat control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox _edFax;
+        protected global::System.Web.UI.WebControls.LinkButton _lkSalvarCat;
         
         /// <summary>
-        /// _edProprietario control.
+        /// _lkCancelarCat control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox _edProprietario;
+        protected global::System.Web.UI.WebControls.LinkButton _lkCancelarCat;
         
         /// <summary>
-        /// _edTelProp control.
+        /// _lkConcluirCat control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox _edTelProp;
+        protected global::System.Web.UI.WebControls.LinkButton _lkConcluirCat;
         
         /// <summary>
-        /// _edCpfProp control.
+        /// _edCodigoCat control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox _edCpfProp;
+        protected global::System.Web.UI.WebControls.TextBox _edCodigoCat;
         
         /// <summary>
-        /// _edCep control.
+        /// _edCategoria control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox _edCep;
-        
-        /// <summary>
-        /// _edMunicipio control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox _edMunicipio;
-        
-        /// <summary>
-        /// _edBairro control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox _edBairro;
-        
-        /// <summary>
-        /// _edLogradouro control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox _edLogradouro;
-        
-        /// <summary>
-        /// _edNumero control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox _edNumero;
-        
-        /// <summary>
-        /// _edComplemento control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox _edComplemento;
+        protected global::System.Web.UI.WebControls.TextBox _edCategoria;
     }
 }
